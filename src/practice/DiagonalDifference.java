@@ -2,6 +2,7 @@ package practice;
 
 import java.util.List;
 
+// https://www.hackerrank.com/challenges/diagonal-difference/problem
 public class DiagonalDifference {
 
 	public static void main(String[] args) {
