@@ -21,6 +21,9 @@ public class DiagonalDifference {
 				if(row == col) {
 					sum1 += arr.get(row).get(col);
 				}
+				if(row + col == numberOfRows - 1) {
+					sum2 += arr.get(row).get(col);
+				}
 			}
 		}
 		return Math.abs(sum1 - sum2);
