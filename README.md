@@ -1,3 +1,3 @@
 # Learn
-Learning Repo
+HackerRank Problem Solutions
 # Learn
