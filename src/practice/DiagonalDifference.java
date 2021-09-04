@@ -15,7 +15,6 @@ public class DiagonalDifference {
 	    int numberOfRows = arr.get(0).size();
 	    int sum1 = 0;
 		int sum2 = 0;
-		
 		for(int row = 0; row < numberOfRows; row++) {
 			for(int col = 0; col < numberOfColumns; col++) {
 				if(row == col) {
