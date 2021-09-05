@@ -17,7 +17,8 @@ public class SockMerchant {
 	public static int sockMerchant(int n, List<Integer> socks) {
 		int numPairs = 0;
 		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-
+		
+		
 		for (int sock : socks) {
 			if (map.containsKey(sock)) {
 				int val = map.get(sock);
@@ -30,6 +31,9 @@ public class SockMerchant {
 				map.put(sock, 0);
 			}
 		}
+		
+		// total complexity O(n)
+		// Space Complexity  O(n/2)
 
 		return numPairs;
 
