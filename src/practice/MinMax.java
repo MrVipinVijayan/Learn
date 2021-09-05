@@ -25,6 +25,7 @@ public class MinMax {
 			}
 			count++;
 		}
+		// O(n)
 		Logger.print(min + " " + max);
 	}
 

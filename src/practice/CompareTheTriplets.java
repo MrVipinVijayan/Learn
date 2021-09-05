@@ -18,6 +18,8 @@ public class CompareTheTriplets {
 		awards.add(0);
 		awards.add(0);
 		int length = a.size();
+		// O(n)
+		// Space => 0(2)
 		for (int i = 0; i < length; i++) {
 			if (a.get(i) > b.get(i)) {
 				awards.set(0, awards.get(0) + 1);
