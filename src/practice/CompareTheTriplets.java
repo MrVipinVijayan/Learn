@@ -14,21 +14,20 @@ public class CompareTheTriplets {
 	}
 
 	public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
-		List<Integer> awards = new ArrayList<Integer>(2);
-		awards.add(0);
-		awards.add(0);
+		int award1 = 0;
+		int award2 = 0;
 		int length = a.size();
 		// O(n)
 		// Space => 0(2)
 		for (int i = 0; i < length; i++) {
 			if (a.get(i) > b.get(i)) {
-				awards.set(0, awards.get(0) + 1);
+				award1++;
 			}
 			if (a.get(i) < b.get(i)) {
-				awards.set(1, awards.get(1) + 1);
+				award2++;
 			}
 		}
-		return awards;
+		return Arrays.asList(award1, award2);
 	}
 
 }
