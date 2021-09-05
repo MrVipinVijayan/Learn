@@ -2,7 +2,7 @@ package practice;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;	
+import java.util.List;
 
 // https://www.hackerrank.com/challenges/birthday-cake-candles/problem
 public class BirthdayCakeCandles {
@@ -13,26 +13,26 @@ public class BirthdayCakeCandles {
 	}
 
 	public static int birthdayCakeCandles(List<Integer> candles) {
-		if(null==candles || candles.isEmpty()) {
+		
+		if (null == candles || candles.isEmpty()) {
 			return 0;
 		}
-		
+
 		int tallCandleCount = 0;
-		int max = -1;
-		
-		// O(nlogn)
-		Collections.sort(candles, Collections.reverseOrder());
-		
+		int max = 0;
+
 		// O(n)
-		for(int candleHeight : candles) {
-			if(max != -1 && max != candleHeight) {
-				break;
+		for (int candleHeight : candles) {
+			if (candleHeight == max) {
+				tallCandleCount++;
+				continue;
 			}
-			tallCandleCount++;
-			max = candleHeight;
+			if (candleHeight > max) {
+				max = candleHeight;
+				tallCandleCount = 1;
+			}
 		}
 		
-		// total => O(nlogn)+ O(n) => O(nlogn)
 		return tallCandleCount;
 	}
 
