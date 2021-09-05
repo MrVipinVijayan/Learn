@@ -36,6 +36,9 @@ public class PlusMinus {
 		System.out.println(p);
 		System.out.println(n);
 		System.out.println(z);
+		
+		// Time = O(n)
+		// Space = I don't know what to say here.
 
 	}
 
