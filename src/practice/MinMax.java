@@ -22,6 +22,8 @@ public class MinMax {
 			max = Math.max(max, arr.get(i));
 			sum += arr.get(i);
 		}
+		
+		// O(n) - Runtime
 		System.out.println((sum - max) + " " + (sum - min));
 	}
 
