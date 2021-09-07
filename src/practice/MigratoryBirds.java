@@ -22,12 +22,14 @@ public class MigratoryBirds {
 //			map.put(bird, map.get(bird));
 //		}
 		
+		// O(n)
 		int birdCount[] = new int[5];  // each type is 1,2,3,4,5.
 		for(int bird: arr) {
 			birdCount[bird] = birdCount[bird] + 1;
 		}     
 		
 		// 2, 2, 1
+		// O(n)
 		for(int whichBird = 0; whichBird < birdCount.length; whichBird++) {
 			if(birdCount[whichBird] > maxBirdCount) {
 				maxBirdCount = birdCount[whichBird];
@@ -35,6 +37,7 @@ public class MigratoryBirds {
 			}
 		}
 			
+		// total => O(n) 
 		return theBird;
 
 	}

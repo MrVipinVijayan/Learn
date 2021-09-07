@@ -20,8 +20,10 @@ public class BirthdayCakeCandles {
 		int tallCandleCount = 0;
 		int max = -1;
 		
+		// O(nlogn)
 		Collections.sort(candles, Collections.reverseOrder());
 		
+		// O(n)
 		for(int candleHeight : candles) {
 			if(max != -1 && max != candleHeight) {
 				break;
@@ -29,6 +31,8 @@ public class BirthdayCakeCandles {
 			tallCandleCount++;
 			max = candleHeight;
 		}
+		
+		// total => O(nlogn)+ O(n) => O(nlogn)
 		return tallCandleCount;
 	}
 

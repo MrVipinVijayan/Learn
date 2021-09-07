@@ -13,19 +13,18 @@ public class MinMax {
 	}
 
 	public static void miniMaxSum(List<Integer> arr) {
-		Collections.sort(arr);
-		long min = 0;
+		long min = arr.get(0);
 		long max = 0;
-		long count = 0;
-		int length = arr.size();
+		long sum = 0;
+		long length = arr.size();
 		for (int i = 0; i < length; i++) {
-			if (count < 4) {
-				min += arr.get(i);
-				max += arr.get(length - i - 1);
-			}
-			count++;
+			min = Math.min(min, arr.get(i));
+			max = Math.max(max, arr.get(i));
+			sum += arr.get(i);
 		}
-		Logger.print(min + " " + max);
+		
+		// O(n) - Runtime
+		System.out.println((sum - max) + " " + (sum - min));
 	}
 
 }

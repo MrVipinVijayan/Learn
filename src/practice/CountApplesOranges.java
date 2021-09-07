@@ -12,6 +12,7 @@ public class CountApplesOranges {
 		int numApples = 0;
 		int numOranges = 0;
 
+		// O(n)
 		for (int apple : apples) {
 			apple = apple + a;
 			if (apple >= s && apple <= t) {
@@ -19,6 +20,7 @@ public class CountApplesOranges {
 			}
 		}
 
+		// O(n)
 		for (int orange : oranges) {
 			orange = orange + b;
 			if (orange >= s && orange <= t) {
@@ -26,6 +28,7 @@ public class CountApplesOranges {
 			}
 		}
 
+		// Total = O(n) + O(n) = O(n)
 		Logger.print(numApples + "\n" + numOranges);
 
 	}
