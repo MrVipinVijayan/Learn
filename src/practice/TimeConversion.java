@@ -23,8 +23,10 @@ public class TimeConversion {
 		int hr = Integer.parseInt(parts[0]);
 		String hrString = String.valueOf(hr);
 
-		if (pm && hr < 12) {
+		if (pm) {
+			if (hr < 12) {
 				hr = hr + 12;
+			}
 		} else {
 			if (hr >= 12) {
 				hr = hr - 12;
