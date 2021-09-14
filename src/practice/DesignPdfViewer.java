@@ -32,4 +32,6 @@ public class DesignPdfViewer {
 		return maxHeight * word.length();
 
 	}
+
+	
 }
